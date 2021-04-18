@@ -17,6 +17,10 @@ def todecimal():
     print(total)
 
 
+def tooctal():
+    todecimal()
+
+
 def tobinary():
     decimal: int = int(input("Digite o decimal para ser convertido: "))
 
@@ -26,18 +30,19 @@ def tobinary():
         binary.append(decimal % 2)
         print(decimal, "/", 2, "=", decimal // 2, "resto:", decimal % 2)
         decimal //= 2
-    for i in binary:
+    for i in reversed(binary):
         print(i, end="")
+
 
 print("Escolha qual conversão você deseja fazer,")
 print("0 para converter de binário para decimal e")
-print("1 para converter de binário para decimal: ")
+print("1 para converter de decimal para binário: ")
 
 convertto = int(input())
 
 if convertto == 0:
-    tobinary()
-elif convertto == 1:
     todecimal()
+elif convertto == 1:
+    tobinary()
 else:
     print("Valor inválido")
