@@ -3,8 +3,8 @@ codigo = int(input(""))
 numeroVeiculos = int(input("Digite a quantidade de veículos da cidade: "))
 numeroAcidentes = int(input("Digite a quantidade de acidentes de trânsito com vítimas: "))
 
-maiorIndiceAcidente = numeroAcidentes
-menorIndiceAcidente = numeroAcidentes
+maiorIndiceAcidente = numeroAcidentes / numeroVeiculos
+menorIndiceAcidente = numeroAcidentes / numeroVeiculos
 
 cidadeMaiorIndiceAcidente = codigo
 cidadeMenorIndiceAcidente = codigo
@@ -14,11 +14,11 @@ acidentesEspecifica = 0
 contadorAcidentesEspecifica = 0
 
 for i in range(2, 7):
-    if 0 < numeroAcidentes > maiorIndiceAcidente:
-        maiorIndiceAcidente = numeroAcidentes
+    if 0 < numeroAcidentes / numeroVeiculos > maiorIndiceAcidente:
+        maiorIndiceAcidente = numeroAcidentes / numeroVeiculos
         cidadeMaiorIndiceAcidente = codigo
-    elif numeroAcidentes < menorIndiceAcidente:
-        menorIndiceAcidente = numeroAcidentes
+    elif numeroAcidentes / numeroVeiculos < menorIndiceAcidente:
+        menorIndiceAcidente = numeroAcidentes / numeroVeiculos
         cidadeMenorIndiceAcidente = codigo
 
     totalVeiculos += numeroVeiculos
@@ -32,8 +32,8 @@ for i in range(2, 7):
         numeroVeiculos = int(input("Digite a quantidade de veículos da cidade: "))
         numeroAcidentes = int(input("Digite a quantidade de acidentes de trânsito com vítimas: "))
 
-print('O maior índice de acidentes é', maiorIndiceAcidente, "que pertence a cidade de código",
-      cidadeMaiorIndiceAcidente, "e o menor índice é", menorIndiceAcidente, "que pertence a cidade de código",
+print('\nO maior índice de acidentes é', maiorIndiceAcidente * 100, "% que pertence a cidade de código",
+      cidadeMaiorIndiceAcidente, "e o menor índice é", menorIndiceAcidente * 100, "% que pertence a cidade de código",
       cidadeMenorIndiceAcidente)
 print("A média de veículos nas cinco cidades é", totalVeiculos / 5)
 print("A média de acidentes de trânsito nas cidades com menos de 2.000 veículos é de", acidentesEspecifica / contadorAcidentesEspecifica)
