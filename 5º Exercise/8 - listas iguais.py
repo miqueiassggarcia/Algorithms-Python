@@ -19,6 +19,11 @@ for i in range(numLista):
         igual = False
 
 # if lista2 == lista1: no python é possível comparar arrays
+#     print("As listas são iguais")
+# else:
+#     print("As listas não são iguais")
+
+if igual:
     print("As listas são iguais")
 else:
     print("As listas não são iguais")

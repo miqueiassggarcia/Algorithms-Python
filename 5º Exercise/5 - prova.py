@@ -1,9 +1,9 @@
 print("Gabarito: ")
-nQuestoes = 3
+nQuestoes = 10
 gabarito = [0] * nQuestoes
 
 for i in range(nQuestoes):
-    print("Questão ", i+1, ": ", end="", sep="")
+    print("Questão ", i + 1, ": ", end="", sep="")
     gabarito[i] = input()
 
 nAlunos = int(input("Quantos alunos há na turma? "))
