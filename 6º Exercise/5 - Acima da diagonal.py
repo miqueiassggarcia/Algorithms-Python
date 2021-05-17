@@ -17,8 +17,7 @@ for i in range(tamanhoMatriz):
 soma = 0
 
 for i in range(tamanhoMatriz):
-    for j in range(tamanhoMatriz):
-        if i < j:
+    for j in range(i+1, tamanhoMatriz):
             soma += matriz[i][j]
 
 print("O valor da soma da diagonal principal é", soma)

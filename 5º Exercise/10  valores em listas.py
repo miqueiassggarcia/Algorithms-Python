@@ -9,7 +9,7 @@ print(lista)
 
 for i in range(0, tam, 1):
     naoApareceu = True
-    if i != tam -1:
+    if i != tam - 1:
         j = i + 1
         while lista[i] != lista[j] and j < tam - 1:
             j = j + 1
